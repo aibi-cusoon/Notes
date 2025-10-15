@@ -17,6 +17,7 @@ class OnBoardFragment : Fragment() {
 
     private lateinit var binding: FragmentOnBoardBinding
     private lateinit var adapter: OnBoardAdapter
+    private lateinit var pref: Pref
 
 
     override fun onCreateView(
@@ -24,6 +25,7 @@ class OnBoardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentOnBoardBinding.inflate(inflater, container, false)
+        pref = Pref(requireContext())
         return binding.root
 
     }
@@ -46,7 +48,8 @@ class OnBoardFragment : Fragment() {
     }
 
     private fun onStartBoard(){
-        findNavController().navigate(R.id.back)
+        pref.saveOnBoard(true)
+        findNavController().navigate(R.id.action_onBoardFragment_to_mainFragment)
 
     }
 
