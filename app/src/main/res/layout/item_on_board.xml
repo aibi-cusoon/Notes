@@ -5,30 +5,16 @@
     android:layout_height="match_parent"
     android:background="@color/bg_color">
 
-    <TextView
-        android:id="@+id/skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:fontFamily="@font/poppins"
-        android:text="Пропустить"
-        android:textColor="@color/orange"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="visible"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="36dp"
-        android:layout_marginTop="12dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/skip">
+       app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/notes"
@@ -75,23 +61,11 @@
             android:gravity="center_horizontal"
             android:text="Создавайте заметки в два клика! Записывайте мысли, идеи и важные задачи мгновенно."
             android:textColor="@color/gray"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:paddingBottom="4dp"
+            />
 
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/m_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="60dp"
-            android:backgroundTint="@color/orange"
-            android:fontFamily="@font/inter"
-            android:padding="14dp"
-            android:text="Начать"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:cornerRadius="16dp"
-            android:visibility="visible"/>
 
 
     </LinearLayout>

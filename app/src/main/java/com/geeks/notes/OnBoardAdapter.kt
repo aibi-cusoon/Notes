@@ -3,6 +3,7 @@ package com.geeks.notes
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
@@ -41,18 +42,6 @@ class OnBoardAdapter(private val OnBoardList: List<OnBoardModel>, val onStart:()
             binding.tvDesc.text = onBoard.desc
             binding.lottieImg.setAnimation(onBoard.lottieImg)
             binding.lottieImg.playAnimation()
-            if (adapterPosition == (OnBoardList.size-1)) {
-                binding.skip.visibility = View.INVISIBLE
-                binding.mButton.setOnClickListener {
-                    onStart()
-                    
-                }
-            }else{
-                binding.mButton.visibility = View.INVISIBLE
-                binding.skip.setOnClickListener {
-                    onStart()
-                }
-            }
 
         }
         }

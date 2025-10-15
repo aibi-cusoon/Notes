@@ -4,13 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/black"
+    android:background="@color/bg_color"
     tools:context=".OnBoardFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="480dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Пропустить"
+        android:textColor="@color/orange"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:visibility="visible"/>
 
     <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
         android:id="@+id/dotsIndicator"
@@ -26,6 +40,23 @@
         app:progressMode="true"
         app:dotsStrokeColor="@color/gray"
         app:dotsStrokeWidth="4dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/m_button"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/inter"
+        android:padding="14dp"
+        android:text="Начать"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="16dp"
+        android:visibility="visible"/>
 
 
 
