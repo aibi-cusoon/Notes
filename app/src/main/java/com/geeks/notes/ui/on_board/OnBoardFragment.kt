@@ -1,4 +1,4 @@
-package com.geeks.notes
+package com.geeks.notes.ui.on_board
 
 import android.content.Context
 import android.os.Bundle
@@ -9,11 +9,14 @@ import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
+import com.geeks.notes.data.models.OnBoardModel
+import com.geeks.notes.data.models.local.Pref
 import com.geeks.notes.databinding.FragmentOnBoardBinding
 import com.geeks.notes.databinding.ItemOnBoardBinding
+import com.geeks.notes.ui.on_board.adapter.OnBoardAdapter
 import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
-class OnBoardFragment : Fragment() {
+class OnBoardFragment : androidx.fragment.app.Fragment() {
 
     private lateinit var binding: FragmentOnBoardBinding
     private lateinit var adapter: OnBoardAdapter
@@ -40,7 +43,8 @@ class OnBoardFragment : Fragment() {
 
 
     private fun initView() {
-        adapter = OnBoardAdapter(loadOnBoardData(), ::onStartBoard)
+        adapter =
+            OnBoardAdapter(loadOnBoardData(), ::onStartBoard)
         binding.viewPager.adapter = adapter
         binding.dotsIndicator.attachTo(binding.viewPager)
 
@@ -49,7 +53,7 @@ class OnBoardFragment : Fragment() {
 
     private fun onStartBoard(){
         pref.saveOnBoard(true)
-        findNavController().navigate(R.id.action_onBoardFragment_to_mainFragment)
+        findNavController().navigate(_root_ide_package_.com.geeks.notes.R.id.action_onBoardFragment_to_mainFragment)
 
     }
 

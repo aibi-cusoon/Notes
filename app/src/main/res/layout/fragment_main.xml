@@ -3,17 +3,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.MainFragment"
     android:background="@color/bg_color">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="We are not going back"
-        android:textSize="30sp"
-        android:layout_gravity="center"
-        android:fontFamily="@font/potta_one"
-        android:textColor="@color/orange"/>
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="20dp">
 
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_menu"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Все заметки"
+            android:layout_marginHorizontal="110dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_grid"/>
+
+    </LinearLayout>
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="70dp"
+        android:layout_marginHorizontal="20dp"
+        app:cardBackgroundColor="@color/light_gray"
+        app:cardCornerRadius="12dp">
+        
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginVertical="16dp"
+            android:layout_marginHorizontal="48dp"
+            android:text="Поиск заметок"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/gray"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="140dp"
+        android:layout_gravity="top"
+        android:id="@+id/rv_notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_create_note"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/orange"
+        android:src="@drawable/ic_create"/>
 
 </FrameLayout>

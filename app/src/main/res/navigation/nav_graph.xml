@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/onBoardFragment"
-        android:name="com.geeks.notes.OnBoardFragment"
+        android:name="com.geeks.notes.ui.on_board.OnBoardFragment"
         android:label="fragment_on_board"
         tools:layout="@layout/fragment_on_board" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.geeks.notes.MainFragment"
+        android:name="com.geeks.notes.ui.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
 
@@ -25,6 +25,11 @@
         app:destination="@id/mainFragment"
         app:popUpTo="@id/onBoardFragment"
         app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/createNotesFragment"
+        android:name="com.geeks.notes.ui.create_notes.CreateNotesFragment"
+        android:label="fragment_create"
+        tools:layout="@layout/fragment_create" />
 
 
 </navigation>

@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("androidx.navigation.safeargs.kotlin")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -62,5 +63,10 @@ dependencies {
 
     //Lottie
     implementation(libs.lottie)
+
+    //Room
+    implementation(libs.androidx.room.runtime)
+    ksp("androidx.room:room-compiler:2.8.2")
+
 
 }

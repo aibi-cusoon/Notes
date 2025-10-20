@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black"
-    tools:context=".OnBoardFragment">
+    tools:context=".ui.on_board.OnBoardFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
