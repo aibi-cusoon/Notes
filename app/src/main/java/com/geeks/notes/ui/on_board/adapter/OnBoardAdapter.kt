@@ -1,11 +1,10 @@
-package com.geeks.notes
+package com.geeks.notes.ui.on_board.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
+import com.geeks.notes.data.models.OnBoardModel
 import com.geeks.notes.databinding.ItemOnBoardBinding
 
 class OnBoardAdapter(private val OnBoardList: List<OnBoardModel>, val onStart:()-> Unit) :
@@ -45,7 +44,7 @@ class OnBoardAdapter(private val OnBoardList: List<OnBoardModel>, val onStart:()
                 binding.skip.visibility = View.INVISIBLE
                 binding.mButton.setOnClickListener {
                     onStart()
-                    
+
                 }
             }else{
                 binding.mButton.visibility = View.INVISIBLE
@@ -57,5 +56,3 @@ class OnBoardAdapter(private val OnBoardList: List<OnBoardModel>, val onStart:()
         }
         }
 }
-
-

@@ -1,6 +1,4 @@
-package com.geeks.notes
-
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+package com.geeks.notes.data.models
 
 data class OnBoardModel(
     val title: String,

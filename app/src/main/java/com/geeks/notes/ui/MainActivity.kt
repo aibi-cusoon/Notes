@@ -1,4 +1,4 @@
-package com.geeks.notes
+package com.geeks.notes.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
+import com.geeks.notes.data.models.local.Pref
+import com.geeks.notes.R
 import com.geeks.notes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
