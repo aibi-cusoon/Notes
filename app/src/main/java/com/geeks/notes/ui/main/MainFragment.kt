@@ -17,7 +17,7 @@ import com.google.android.material.button.MaterialButton
 class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
-    private val noteAdapter = NotesAdapter(::onLongClick)
+    private val noteAdapter = NotesAdapter(::onLongClick, :: onClick)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,9 +57,16 @@ class MainFragment : Fragment() {
         dialog.show()
     }
 
+    private fun onClick(notesModel: NotesModel){
+        val action = MainFragmentDirections.actionMainFragmentToCreateNotesFragment(notesModel)
+        findNavController().navigate(action)
+
+    }
+
     private fun setupListener() {
         binding.btnCreateNote.setOnClickListener {
-            findNavController().navigate(R.id.createNotesFragment)
+            val action = MainFragmentDirections.actionMainFragmentToCreateNotesFragment(null)
+            findNavController().navigate(action)
         }
     }
 

@@ -18,7 +18,11 @@
         android:id="@+id/mainFragment"
         android:name="com.geeks.notes.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_createNotesFragment"
+            app:destination="@id/createNotesFragment" />
+    </fragment>
 
     <action
         android:id="@+id/back"
@@ -29,7 +33,15 @@
         android:id="@+id/createNotesFragment"
         android:name="com.geeks.notes.ui.create_notes.CreateNotesFragment"
         android:label="fragment_create"
-        tools:layout="@layout/fragment_create" />
+        tools:layout="@layout/fragment_create">
+        <argument
+            android:defaultValue="@null"
+            app:nullable="true"
+            android:name="notes"
+            app:argType="com.geeks.notes.data.models.NotesModel" />
+
+    </fragment>
+
 
 
 </navigation>
