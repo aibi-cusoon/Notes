@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "926699296107",
+    "project_id": "note-app-fb403",
+    "storage_bucket": "note-app-fb403.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926699296107:android:1a4eff7eaf81510649682e",
+        "android_client_info": {
+          "package_name": "com.geeks.notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926699296107-hl1i8535tc2sfh5u9ur9peuk9k5l7svq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geeks.notes",
+            "certificate_hash": "e6695205bd652db40d8318e7535ec6aeb097ec67"
+          }
+        },
+        {
+          "client_id": "926699296107-9bg7pnvs5a0csf01c0uneppv0un4kpvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAdNKn2cjilLYqpzOQRiv4HeLZFsSdkAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926699296107-9bg7pnvs5a0csf01c0uneppv0un4kpvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
