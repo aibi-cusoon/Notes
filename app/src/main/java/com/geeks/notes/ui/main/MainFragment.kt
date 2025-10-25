@@ -1,7 +1,6 @@
 package com.geeks.notes.ui.main
 
 import android.app.AlertDialog
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -51,11 +50,7 @@ class MainFragment : Fragment() {
         }
         binding.btnLogout.setOnClickListener {
             auth.signOut()
-
-            binding.btnLogout.setOnClickListener {
-                auth.signOut()
-                findNavController().navigate(R.id.authFragment)
-            }
+            findNavController().navigate(R.id.authFragment)
         }
     }
 
