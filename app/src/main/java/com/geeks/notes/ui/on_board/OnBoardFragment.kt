@@ -53,7 +53,7 @@ class OnBoardFragment : androidx.fragment.app.Fragment() {
 
     private fun onStartBoard(){
         pref.saveOnBoard(true)
-        findNavController().navigate(_root_ide_package_.com.geeks.notes.R.id.action_onBoardFragment_to_mainFragment)
+        findNavController().navigate(_root_ide_package_.com.geeks.notes.R.id.authFragment)
 
     }
 

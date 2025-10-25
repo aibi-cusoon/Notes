@@ -4,4 +4,5 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     id("androidx.navigation.safeargs.kotlin") apply false version "2.9.5"
     id("com.google.devtools.ksp") version "2.2.20-2.0.2"
+    id("com.google.gms.google-services") version "4.4.4" apply false
 }

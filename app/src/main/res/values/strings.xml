@@ -2,4 +2,5 @@
     <string name="app_name">Notes</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_web_client_Id">926699296107-9bg7pnvs5a0csf01c0uneppv0un4kpvc.apps.googleusercontent.com</string>
 </resources>

@@ -30,6 +30,11 @@
         android:name="com.geeks.notes.ui.create_notes.CreateNotesFragment"
         android:label="fragment_create"
         tools:layout="@layout/fragment_create" />
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.geeks.notes.ui.auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" />
 
 
 </navigation>

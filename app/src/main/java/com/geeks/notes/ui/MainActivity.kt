@@ -9,10 +9,14 @@ import androidx.navigation.fragment.NavHostFragment
 import com.geeks.notes.data.models.local.Pref
 import com.geeks.notes.R
 import com.geeks.notes.databinding.ActivityMainBinding
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var pref: Pref
+    private val userFirebase = Firebase.auth.currentUser
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,13 +31,21 @@ class MainActivity : AppCompatActivity() {
         val navHost: NavHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         val navGraph = navHost.navController.navInflater.inflate(R.navigation.nav_graph)
+
         navGraph.setStartDestination(
             if (pref.isUserSeen()) {
+                if (userFirebase!== null){
                 R.id.mainFragment
-            }else{
+                }else{
+                    R.id.authFragment
+                }
+            } else{
                 R.id.onBoardFragment
             }
+
+
         )
         navHost.navController.graph = navGraph
+
     }
 }
