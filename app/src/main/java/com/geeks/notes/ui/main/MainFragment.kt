@@ -7,12 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.bumptech.glide.Glide
 import com.geeks.notes.App
 import com.geeks.notes.R
 import com.geeks.notes.data.models.NotesModel
 import com.geeks.notes.databinding.FragmentMainBinding
 import com.geeks.notes.ui.main.adapter.NotesAdapter
 import com.google.android.material.button.MaterialButton
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.auth
 
 class MainFragment : Fragment() {
 
@@ -32,6 +37,21 @@ class MainFragment : Fragment() {
         initView()
         setupListener()
         getData()
+
+        val auth: FirebaseAuth = Firebase.auth
+
+        val user: FirebaseUser? = auth.currentUser
+        user?.let {
+            binding.tvUserName.text = user.displayName
+            Glide.with(this)
+                .load(it.photoUrl)
+                .into(binding.ivAvatar)
+
+        }
+        binding.btnLogout.setOnClickListener {
+            auth.signOut()
+            findNavController().navigate(R.id.authFragment)
+        }
     }
 
     private fun initView() {

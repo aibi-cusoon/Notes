@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.auth.AuthFragment"
+    android:background="@color/bg_color">
+
+    <TextView
+        android:id="@+id/tv_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notes"
+        android:fontFamily="@font/potta_one"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="52dp"/>
+    
+    
+    <ImageView
+        android:id="@+id/iv_note"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/ic_note"
+        app:layout_constraintTop_toBottomOf="@id/tv_notes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="140dp"/>
+
+    <TextView
+        android:id="@+id/tv_authorise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Авторизация"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/white"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_note"
+        app:layout_constraintStart_toStartOf="@id/iv_note"
+        app:layout_constraintEnd_toEndOf="@id/iv_note"/>
+    
+
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/btn_login"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="@id/tv_authorise"
+           android:layout_width="200dp"
+           android:layout_height="40dp"
+           android:padding="2dp"
+           android:textColor="@color/black"
+           android:textSize="12dp"
+           app:cardCornerRadius="20dp">
+           <ImageView
+               android:id="@+id/logo"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_logo"
+               android:padding="8dp"/>
+           <TextView
+               android:layout_marginStart="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Sign in with Google"
+               android:layout_gravity="end|center"
+               android:layout_marginEnd="30dp"
+               android:textColor="@color/black"
+               android:textSize="14sp"/>
+
+       </androidx.cardview.widget.CardView>
+
+
+
+
+
+    
+        
+
+</androidx.constraintlayout.widget.ConstraintLayout>
